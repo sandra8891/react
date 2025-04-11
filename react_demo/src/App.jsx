@@ -1,8 +1,8 @@
 import { useState } from 'react'
 // import React from 'react'
 import React, { Component } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 
 // function App() {
@@ -168,54 +168,209 @@ import './App.css'
 // export default App
 
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-  }
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       count: 0,
+//     };
+//   }
 
 
-  increment = () => {
-    this.setState(prevState => ({
-      count: prevState.count + 1,
-    }));
-  };
+//   increment = () => {
+//     this.setState(prevState => ({
+//       count: prevState.count + 1,
+//     }));
+//   };
 
   
-  decrement = () => {
-    this.setState(prevState => ({
-      count: prevState.count > 0 ? prevState.count - 1 : 0,
-    }));
-  };
+//   decrement = () => {
+//     this.setState(prevState => ({
+//       count: prevState.count > 0 ? prevState.count - 1 : 0,
+//     }));
+//   };
 
-  render() {
-    return (
-      <>
-        <div>
-          <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">
-            <img src="/vite.svg" className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-           <img src={reactLogo} className="logo react" alt="React logo" />
-         </a>
-        </div>
-        <h1>Vite + React</h1>
-        <div className="card">
-          <p>{this.state.count}</p>
-          <button onClick={this.increment}>+</button>
-          <button onClick={this.decrement}>-</button>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
-      </>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <>
+//         <div>
+//           <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">
+//             <img src="/vite.svg" className="logo" alt="Vite logo" />
+//           </a>
+//           <a href="https://react.dev" target="_blank">
+//            <img src={reactLogo} className="logo react" alt="React logo" />
+//          </a>
+//         </div>
+//         <h1>Vite + React</h1>
+//         <div className="card">
+//           <p>{this.state.count}</p>
+//           <button onClick={this.increment}>+</button>
+//           <button onClick={this.decrement}>-</button>
+//           <p>
+//             Edit <code>src/App.jsx</code> and save to test HMR
+//           </p>
+//         </div>
+//         <p className="read-the-docs">
+//           Click on the Vite and React logos to learn more
+//         </p>
+//       </>
+//     );
+//   }
+// }
 
-export default App;
+
+
+// class App extends React.Component{
+//     constructor(props){
+//       super(props)
+//       this.state={age:20}
+//     }
+//     changeAge=()=>{
+//       this.setState({age:25})
+//     }
+//     static getDerivedStateFromProps(props,state){
+//       return{age:props.age}
+//     }
+//     render(){
+//       return(
+//         <>
+//         <h1>hello</h1>
+//         <h2>age{this.state.age}</h2>
+//         <button onClick={this.changeAge}>Change Age</button>
+//         </>
+//       )
+//     }
+//   }
+  
+
+// export default App;
+
+
+
+
+// class App extends React.Component{
+//     constructor(){
+//       super()
+//       this.state={age:20}
+//     }
+//     componentDidMount(){
+//       setTimeout(()=>{
+//         this.setState({age:30})
+//       },1000)
+//     }
+//     render(){
+//       return(
+//         <>
+//         <h1>hello</h1>
+//         <h2>age{this.state.age}</h2>
+//         <button onClick={this.changeAge}>Change Age</button>
+//         </>
+//       )
+//     }
+//  }
+  
+//   export default App
+
+
+
+
+// class App extends React.Component{
+//     constructor(props){
+//       super(props)
+//       this.state={age:20}
+//     }
+//     shouldComponentUpdate(){
+//       return true
+      // return false
+//     }
+    
+//     changeAge=()=>{
+//       this.setState({age:25})
+//     }
+//     render(){
+//       return(
+//         <>
+//         <h1>hello</h1>
+//         <h2>age{this.state.age}</h2>
+//         <button onClick={this.changeAge}>Change Age</button>
+//         </>
+//       )
+//     }
+//   }
+  
+//   export default App
+
+
+
+
+// class App extends React.Component{
+//     constructor(props){
+//       super(props)
+//       this.state={age:20}
+//     }
+//     changeAge=()=>{
+//       this.setState({age:25})
+//     }
+//     componentDidMount(){
+//       setTimeout(()=>{
+//         this.setState({age:30})
+//       },1000)
+//     }
+//     getSnapshotBeforeUpdate(prevProps,prevState){
+//       console.log(prevProps,prevState);
+//     }
+//     componentDidUpdate(){
+//       console.log("component updated");
+      
+//     }
+//     render(){
+//       return(
+//         <>
+//         <h1>hello</h1>
+//         <h2>age{this.state.age}</h2>
+//         <button onClick={this.changeAge}>Change Age</button>
+//         </>
+//       )
+//     }
+//   }
+
+
+
+
+//unmount(componentwillunmount)
+// class App extends React.Component{
+//   constructor(){
+//     super()
+//     this.state={show:true}
+//   }
+//   deleteHead = ()=>{
+//     this.setState({show:false})
+//   }
+//   render(){
+//     let myhead;
+//     if(this.state.show){
+//       myhead=<Sub/>
+//     }
+//     return(
+//       <div>
+//         {myhead}
+//         <h1>HELLO</h1>
+//         <button onClick={this.deleteHead}>Delete</button>
+//       </div>
+//     )
+//   }
+// }
+// class Sub extends React.Component{
+//   componentWillUnmount(){
+//     alert("componentwillunmount")
+//   }
+//   render(){
+//     return(
+//       <div>
+//         <h1>Sub</h1>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App

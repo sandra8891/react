@@ -6,7 +6,7 @@ import App from './App.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App  name="sandra" age="22"/> */}
-    {/* <App age="20"/> */}
-    <App/>
+    {/* <App/> */}
+    <App age="26"/>
   </StrictMode>,
 )
