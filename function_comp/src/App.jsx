@@ -1,14 +1,13 @@
-import { useState } from 'react'
+import React,{ useState } from 'react'
+import Home from './Components/Home'
+import About from './Components/About'
+import Contact from './Components/Contact'
+import Add from './Components/Add'
+import{BrowserRouter,Route, Routes} from 'react-router-dom'
+// import Sample from './Components/Sample'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import Home from './component/Home'
-import About from './component/About'
-import Contact from './component/Contact'
-import {BrowserRouter,Route,Routes}from 'react-router-dom';
-// import Sample from './Components/Sample'
 // import './App.css'
-
-// const { useState } = require("react");
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -39,7 +38,8 @@ import {BrowserRouter,Route,Routes}from 'react-router-dom';
 //   )
 // }
 
-// export default App
+
+
 
 
 // export default function App(age){
@@ -56,7 +56,6 @@ import {BrowserRouter,Route,Routes}from 'react-router-dom';
 //   )
 // }
 
-
 export default function App() {
   return (
  <>
@@ -65,12 +64,9 @@ export default function App() {
    <Route path='/' element={<Home/>}/>
    <Route path='about' element={<About/>}/>
    <Route path='contact' element={<Contact/>}/>
+   <Route path='add' element={<Add/>}/>
  </Routes>
  </BrowserRouter>
  </>
   )
 }
-
-
-
-
